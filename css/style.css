@@ -3,12 +3,16 @@
    배경 #FAF8F6 | 메인그린 #62743F | 포인트 #8AA060
    ===================================================== */
 
-/* A2z 폰트 (한글) */
+/* A2z 폰트 (한글) — Thin ~ Black 전체 */
+@font-face { font-family:'A2z'; src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-1Thin.woff2') format('woff2'); font-weight:100; font-display:swap; }
+@font-face { font-family:'A2z'; src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-2ExtraLight.woff2') format('woff2'); font-weight:200; font-display:swap; }
 @font-face { font-family:'A2z'; src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-3Light.woff2') format('woff2'); font-weight:300; font-display:swap; }
 @font-face { font-family:'A2z'; src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-4Regular.woff2') format('woff2'); font-weight:400; font-display:swap; }
 @font-face { font-family:'A2z'; src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-5Medium.woff2') format('woff2'); font-weight:500; font-display:swap; }
 @font-face { font-family:'A2z'; src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-6SemiBold.woff2') format('woff2'); font-weight:600; font-display:swap; }
 @font-face { font-family:'A2z'; src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-7Bold.woff2') format('woff2'); font-weight:700; font-display:swap; }
+@font-face { font-family:'A2z'; src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-8ExtraBold.woff2') format('woff2'); font-weight:800; font-display:swap; }
+@font-face { font-family:'A2z'; src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-9Black.woff2') format('woff2'); font-weight:900; font-display:swap; }
 
 :root {
     --bg:        #FAF8F6;
@@ -135,6 +139,8 @@ h1,h2,h3,p { margin: 0; }
 }
 .logo {
     font-family: var(--font-en);
+    font-optical-sizing: auto;
+    font-style: normal;
     font-weight: 700;
     font-size: 34px;
     color: var(--logo);
@@ -373,7 +379,7 @@ h1,h2,h3,p { margin: 0; }
     border-bottom: 1px solid rgba(255,255,255,.2);
     margin-bottom: 32px;
 }
-.footer-logo { font-family: var(--font-en); font-weight: 700; font-size: 40px; margin-bottom: 10px; }
+.footer-logo { font-family: var(--font-en); font-optical-sizing: auto; font-weight: 700; font-size: 40px; margin-bottom: 10px; }
 .footer-slogan { font-size: 17px; letter-spacing: .04em; color: rgba(255,255,255,.85); }
 .footer-nav { display: flex; flex-wrap: wrap; gap: 28px; padding-top: 12px; }
 .footer-nav a { font-size: 18px; color: #fff; transition: opacity .2s; }
