@@ -280,13 +280,21 @@ h1,h2,h3,p { margin: 0; }
     border-radius: 14px;
     padding: 34px 24px;
     box-shadow: 0 6px 24px rgba(0,0,0,.05);
-    text-align: left;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.sf-icon { width: 48px; height: 48px; margin-bottom: 22px; }
+.sf-icon { margin-bottom: 22px; }
 .sf-icon img { width:100%; height:100%; object-fit:contain; }
+.store-feature:nth-child(1) .sf-icon { width: 55px; height: 69px; }
+.store-feature:nth-child(2) .sf-icon { width: 76px; height: 55px; }
+.store-feature:nth-child(3) .sf-icon { width: 79px; height: 55px; }
 .store-feature h3 { font-size: 21px; font-weight: 600; color: var(--dark); margin-bottom: 14px; }
 .store-feature p { font-size: 17px; color: var(--gray-74); line-height: 1.5; }
 .store-btns { display: flex; gap: 16px; margin-top: 50px; }
+.store-btns .btn { padding: 17px 35px 17px 45px; }
 .store-map { flex: 1; min-width: 0; max-width: 560px; }
 .store-map img { width:100%; height:auto; object-fit:contain; }
 
