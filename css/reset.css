@@ -1,0 +1,15 @@
+*{margin: 0;padding: 0;}
+li{list-style: none;}
+a{color: #333; text-decoration: none;}
+
+html, body{height: 100%;}
+img{vertical-align: top;}
+
+input{border: 0; outline: 0;}
+button{border: 0; background: none;}
+body {font-family: "Pretendard", sans-serif;}
+
+fieldset {border: 0}
+legend {font-size: 0; color: transparent; text-indent: -9999px; position: absolute; left: -9999px; top: -9999px;}
+
+textarea {border-radius: 0; font-family: "Pretendard", sans-serif; font-size: 18px;}
