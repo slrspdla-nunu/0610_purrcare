@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항 글쓰기 — PurrCare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css?v=159">
+</head>
+<body>
+
+    <!-- ===== HEADER (메인과 동일) ===== -->
+    <header class="header">
+        <div class="inner nav-container">
+            <a href="index.html" class="logo">PurrCare</a>
+            <nav class="gnb">
+                <ul>
+                    <li>
+                        <a href="#">회사소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">브랜드 스토리</a></li>
+                            <li><a href="#">매장 안내</a></li>
+                            <li><a href="#">채용 정보</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="best.html" class="nav-live">카테고리</a>
+                        <ul class="submenu">
+                            <li><a href="best.html" class="nav-live">전체</a></li>
+                            <li><a href="best.html">캣타워/가구</a></li>
+                            <li><a href="best.html">식기/급수기</a></li>
+                            <li><a href="best.html">화장실/모래</a></li>
+                            <li><a href="best.html">장난감</a></li>
+                            <li><a href="best.html">간식/영양제</a></li>
+                            <li><a href="best.html">브랜드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="bestseller.html" class="nav-live">베스트셀러</a>
+                        <ul class="submenu">
+                            <li><a href="bestseller.html" class="nav-live">실시간 베스트</a></li>
+                            <li><a href="bestseller.html">주간 베스트</a></li>
+                            <li><a href="bestseller.html">월간 베스트</a></li>
+                            <li><a href="bestseller.html">신상품</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">이벤트</a>
+                        <ul class="submenu">
+                            <li><a href="#">진행 중 이벤트</a></li>
+                            <li><a href="#">지난 이벤트</a></li>
+                            <li><a href="#">쿠폰 / 혜택</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="notice.html" class="nav-live">고객센터</a>
+                        <ul class="submenu">
+                            <li><a href="notice.html" class="nav-live">공지사항</a></li>
+                            <li><a href="#">자주 묻는 질문</a></li>
+                            <li><a href="#">1:1 문의</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="util">
+                <button class="util-btn nav-live" aria-label="검색"><img src="image/main/ico_sc.png" alt="검색"></button>
+                <button class="util-btn nav-live" aria-label="마이페이지"><img src="image/main/ico_user.png" alt="마이페이지"></button>
+                <button class="util-btn nav-live" aria-label="장바구니"><img src="image/main/ico_basket.png" alt="장바구니"></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== 공지사항 글쓰기 ===== -->
+    <main class="board">
+        <div class="board-head">
+            <h1>공지사항 글쓰기</h1>
+            <p>새로운 공지를 작성합니다.</p>
+        </div>
+
+        <form class="board-form" onsubmit="return false">
+            <div class="board-form-row">
+                <div class="board-form-label">분류</div>
+                <div class="board-form-field">
+                    <div class="dropdown" data-name="분류">
+                        <button class="dropdown-toggle" type="button" aria-label="분류 선택">
+                            <span class="dd-label">공지</span>
+                            <svg class="dd-chevron" viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l5 5 5-5"/></svg>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="dd-option selected">공지</li>
+                            <li class="dd-option">이벤트</li>
+                            <li class="dd-option">가이드</li>
+                            <li class="dd-option">뉴스</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="board-form-row">
+                <div class="board-form-label">제목</div>
+                <div class="board-form-field">
+                    <input type="text" id="bfTitle" placeholder="제목을 입력하세요">
+                </div>
+            </div>
+            <div class="board-form-row">
+                <div class="board-form-label">내용</div>
+                <div class="board-form-field">
+                    <textarea id="bfBody" placeholder="내용을 입력하세요"></textarea>
+                </div>
+            </div>
+        </form>
+
+        <div class="board-form-foot">
+            <a href="notice.html" class="btn btn-line">취소</a>
+            <button class="btn btn-fill" type="button" id="bfSubmit">등록</button>
+        </div>
+    </main>
+
+    <!-- ===== FOOTER (메인과 동일) ===== -->
+    <footer class="footer">
+        <div class="inner footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <p class="footer-logo">PurrCare</p>
+                    <p class="footer-slogan">FOR CATS, FOR LOVE</p>
+                </div>
+                <ul class="footer-nav">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="notice.html" class="nav-live">고객센터</a></li>
+                    <li><a href="#">입점문의</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <p>(주)PurrCare <span class="div">|</span> 대표이사: 김집사 <span class="div">|</span> 사업자등록번호: 123-45-67890 <span class="div">|</span> 통신판매업신고: 2024-서울강남-1234</p>
+                <p>서울시 강남구 낭낭로 123 푸어케어 빌딩 1층 <span class="div">|</span> 고객센터: 02-1234-5678 <span class="div">|</span> 이메일: purrcare@naver.com</p>
+                <p class="copy">&copy; 2024 PurrCare. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/jquery-4.0.0.min.js"></script>
+    <script src="script/main.js?v=34"></script>
+    <script>
+        $(function () {
+            $('#bfSubmit').on('click', function () {
+                var title = ($('#bfTitle').val() || '').trim();
+                if (!title) { $('#bfTitle').focus(); pcToast('제목을 입력해주세요'); return; }
+                pcToast('등록되었습니다 🐾');
+                setTimeout(function () { location.href = 'notice.html'; }, 900);
+            });
+        });
+    </script>
+</body>
+</html>

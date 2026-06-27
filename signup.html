@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 — PurrCare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css?v=159">
+</head>
+<body>
+
+    <!-- ===== HEADER (메인과 동일) ===== -->
+    <header class="header">
+        <div class="inner nav-container">
+            <a href="index.html" class="logo">PurrCare</a>
+            <nav class="gnb">
+                <ul>
+                    <li>
+                        <a href="#">회사소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">브랜드 스토리</a></li>
+                            <li><a href="#">매장 안내</a></li>
+                            <li><a href="#">채용 정보</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="best.html" class="nav-live">카테고리</a>
+                        <ul class="submenu">
+                            <li><a href="best.html" class="nav-live">전체</a></li>
+                            <li><a href="best.html">캣타워/가구</a></li>
+                            <li><a href="best.html">식기/급수기</a></li>
+                            <li><a href="best.html">화장실/모래</a></li>
+                            <li><a href="best.html">장난감</a></li>
+                            <li><a href="best.html">간식/영양제</a></li>
+                            <li><a href="best.html">브랜드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="bestseller.html" class="nav-live">베스트셀러</a>
+                        <ul class="submenu">
+                            <li><a href="bestseller.html" class="nav-live">실시간 베스트</a></li>
+                            <li><a href="bestseller.html">주간 베스트</a></li>
+                            <li><a href="bestseller.html">월간 베스트</a></li>
+                            <li><a href="bestseller.html">신상품</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">이벤트</a>
+                        <ul class="submenu">
+                            <li><a href="#">진행 중 이벤트</a></li>
+                            <li><a href="#">지난 이벤트</a></li>
+                            <li><a href="#">쿠폰 / 혜택</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="notice.html" class="nav-live">고객센터</a>
+                        <ul class="submenu">
+                            <li><a href="notice.html" class="nav-live">공지사항</a></li>
+                            <li><a href="#">자주 묻는 질문</a></li>
+                            <li><a href="#">1:1 문의</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="util">
+                <button class="util-btn nav-live" aria-label="검색"><img src="image/main/ico_sc.png" alt="검색"></button>
+                <button class="util-btn nav-live" aria-label="마이페이지"><img src="image/main/ico_user.png" alt="마이페이지"></button>
+                <button class="util-btn nav-live" aria-label="장바구니"><img src="image/main/ico_basket.png" alt="장바구니"></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== 회원가입 ===== -->
+    <main class="auth">
+        <div class="auth-card">
+            <div class="auth-head">
+                <h1 class="auth-title">회원가입</h1>
+                <p class="auth-sub">PurrCare의 집사가 되어 다양한 혜택을 누려보세요.</p>
+            </div>
+
+            <form class="auth-form" onsubmit="return false">
+                <input type="email" class="auth-input" placeholder="이메일 주소" autocomplete="email">
+                <input type="password" class="auth-input" placeholder="비밀번호 (영문·숫자 포함 8자 이상)" autocomplete="new-password">
+                <input type="password" class="auth-input" placeholder="비밀번호 확인" autocomplete="new-password">
+                <input type="text" class="auth-input" placeholder="이름" autocomplete="name">
+                <input type="tel" class="auth-input" placeholder="휴대폰 번호 ('-' 없이 입력)" autocomplete="tel">
+
+                <div class="auth-agree">
+                    <label class="auth-agree-all"><input type="checkbox" id="agreeAll"> 전체 동의</label>
+                    <label class="auth-agree-item"><input type="checkbox" class="agree-check"> <span><a href="#">이용약관</a> 동의</span> <span class="req">필수</span></label>
+                    <label class="auth-agree-item"><input type="checkbox" class="agree-check"> <span><a href="#">개인정보 수집·이용</a> 동의</span> <span class="req">필수</span></label>
+                    <label class="auth-agree-item"><input type="checkbox" class="agree-check"> <span>마케팅 정보 수신 동의</span> <span class="opt">선택</span></label>
+                </div>
+
+                <button class="btn btn-fill btn-login" type="submit">회원가입</button>
+            </form>
+
+            <div class="auth-divider">간편 회원가입</div>
+            <div class="auth-social">
+                <a href="#" class="social-kakao" aria-label="카카오로 시작">K</a>
+                <a href="#" class="social-naver" aria-label="네이버로 시작">N</a>
+                <a href="#" class="social-google" aria-label="구글로 시작">G</a>
+            </div>
+
+            <p class="auth-signup">이미 회원이신가요?<a href="login.html">로그인</a></p>
+        </div>
+    </main>
+
+    <!-- ===== FOOTER (메인과 동일) ===== -->
+    <footer class="footer">
+        <div class="inner footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <p class="footer-logo">PurrCare</p>
+                    <p class="footer-slogan">FOR CATS, FOR LOVE</p>
+                </div>
+                <ul class="footer-nav">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="notice.html" class="nav-live">고객센터</a></li>
+                    <li><a href="#">입점문의</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <p>(주)PurrCare <span class="div">|</span> 대표이사: 김집사 <span class="div">|</span> 사업자등록번호: 123-45-67890 <span class="div">|</span> 통신판매업신고: 2024-서울강남-1234</p>
+                <p>서울시 강남구 낭낭로 123 푸어케어 빌딩 1층 <span class="div">|</span> 고객센터: 02-1234-5678 <span class="div">|</span> 이메일: purrcare@naver.com</p>
+                <p class="copy">&copy; 2024 PurrCare. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/jquery-4.0.0.min.js"></script>
+    <script src="script/main.js?v=34"></script>
+    <script>
+        $(function () {
+            $('#agreeAll').on('change', function () { $('.agree-check').prop('checked', this.checked); });
+            $('.agree-check').on('change', function () {
+                $('#agreeAll').prop('checked', $('.agree-check:not(:checked)').length === 0);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니 — PurrCare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css?v=159">
+</head>
+<body>
+
+    <!-- ===== HEADER (메인과 동일) ===== -->
+    <header class="header">
+        <div class="inner nav-container">
+            <a href="index.html" class="logo">PurrCare</a>
+            <nav class="gnb">
+                <ul>
+                    <li>
+                        <a href="#">회사소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">브랜드 스토리</a></li>
+                            <li><a href="#">매장 안내</a></li>
+                            <li><a href="#">채용 정보</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="best.html" class="nav-live">카테고리</a>
+                        <ul class="submenu">
+                            <li><a href="best.html" class="nav-live">전체</a></li>
+                            <li><a href="best.html">캣타워/가구</a></li>
+                            <li><a href="best.html">식기/급수기</a></li>
+                            <li><a href="best.html">화장실/모래</a></li>
+                            <li><a href="best.html">장난감</a></li>
+                            <li><a href="best.html">간식/영양제</a></li>
+                            <li><a href="best.html">브랜드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="bestseller.html" class="nav-live">베스트셀러</a>
+                        <ul class="submenu">
+                            <li><a href="bestseller.html" class="nav-live">실시간 베스트</a></li>
+                            <li><a href="bestseller.html">주간 베스트</a></li>
+                            <li><a href="bestseller.html">월간 베스트</a></li>
+                            <li><a href="bestseller.html">신상품</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">이벤트</a>
+                        <ul class="submenu">
+                            <li><a href="#">진행 중 이벤트</a></li>
+                            <li><a href="#">지난 이벤트</a></li>
+                            <li><a href="#">쿠폰 / 혜택</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="notice.html" class="nav-live">고객센터</a>
+                        <ul class="submenu">
+                            <li><a href="notice.html" class="nav-live">공지사항</a></li>
+                            <li><a href="#">자주 묻는 질문</a></li>
+                            <li><a href="#">1:1 문의</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="util">
+                <button class="util-btn nav-live" aria-label="검색"><img src="image/main/ico_sc.png" alt="검색"></button>
+                <button class="util-btn nav-live" aria-label="마이페이지"><img src="image/main/ico_user.png" alt="마이페이지"></button>
+                <button class="util-btn nav-live" aria-label="장바구니"><img src="image/main/ico_basket.png" alt="장바구니"></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== 상단 배너 ===== -->
+    <section class="cart-hero">
+        <img src="image/main/header-cart.png" alt="">
+        <div class="inner cart-hero-text">
+            <h1>장바구니</h1>
+            <p>PurrCare와 함께 우리 고양이를 위한<br>최고의 선택을 완성해보세요.</p>
+        </div>
+    </section>
+
+    <!-- ===== 브레드크럼 ===== -->
+    <div class="inner">
+        <nav class="breadcrumb">
+            <a href="index.html" aria-label="홈"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;vertical-align:-3px;"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg></a>
+            <span class="sep">&rsaquo;</span>
+            <span class="current">장바구니</span>
+        </nav>
+    </div>
+
+    <!-- ===== 장바구니 본문 ===== -->
+    <section class="inner cart-layout">
+        <!-- 좌측: 상품 목록 -->
+        <div class="cart-main">
+            <div class="cart-head-row">
+                <label class="cart-all"><input type="checkbox" id="cartAll"> 전체 선택 (<span id="cartAllCount">0/3</span>)</label>
+                <button class="cart-del-sel" type="button">선택 상품 삭제 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/></svg></button>
+            </div>
+
+            <ul class="cart-list">
+                <li class="cart-item" data-price="139000">
+                    <label class="ci-check"><input type="checkbox" class="ci-check-box" checked></label>
+                    <div class="ci-thumb"><img src="image/main/best-thumb-cat-tree.png" alt="포우 캣타워 캣트리"></div>
+                    <div class="ci-info">
+                        <p class="ci-name">포우 캣타워 캣트리</p>
+                        <p class="ci-opt">베이지 | 단품</p>
+                        <p class="ci-unit">₩139,000</p>
+                    </div>
+                    <div class="ci-qty">
+                        <div class="qty-stepper">
+                            <button class="qty-minus" type="button" aria-label="수량 감소">&minus;</button>
+                            <span class="qty-num">1</span>
+                            <button class="qty-plus" type="button" aria-label="수량 증가">+</button>
+                        </div>
+                    </div>
+                    <div class="ci-total">₩139,000</div>
+                    <button class="ci-remove" type="button" aria-label="삭제">&times;</button>
+                </li>
+                <li class="cart-item" data-price="89000">
+                    <label class="ci-check"><input type="checkbox" class="ci-check-box" checked></label>
+                    <div class="ci-thumb"><img src="image/main/best-thumb-auto-feeder.png" alt="퓨어 자동 급식기"></div>
+                    <div class="ci-info">
+                        <p class="ci-name">퓨어 자동 급식기</p>
+                        <p class="ci-opt">화이트 | 3.2L</p>
+                        <p class="ci-unit">₩89,000</p>
+                    </div>
+                    <div class="ci-qty">
+                        <div class="qty-stepper">
+                            <button class="qty-minus" type="button" aria-label="수량 감소">&minus;</button>
+                            <span class="qty-num">1</span>
+                            <button class="qty-plus" type="button" aria-label="수량 증가">+</button>
+                        </div>
+                    </div>
+                    <div class="ci-total">₩89,000</div>
+                    <button class="ci-remove" type="button" aria-label="삭제">&times;</button>
+                </li>
+                <li class="cart-item" data-price="49000">
+                    <label class="ci-check"><input type="checkbox" class="ci-check-box" checked></label>
+                    <div class="ci-thumb"><img src="image/main/best-thumb-litter-box.png" alt="클린 후드형 화장실"></div>
+                    <div class="ci-info">
+                        <p class="ci-name">클린 후드형 화장실</p>
+                        <p class="ci-opt">그린 | 대형</p>
+                        <p class="ci-unit">₩49,000</p>
+                    </div>
+                    <div class="ci-qty">
+                        <div class="qty-stepper">
+                            <button class="qty-minus" type="button" aria-label="수량 감소">&minus;</button>
+                            <span class="qty-num">1</span>
+                            <button class="qty-plus" type="button" aria-label="수량 증가">+</button>
+                        </div>
+                    </div>
+                    <div class="ci-total">₩49,000</div>
+                    <button class="ci-remove" type="button" aria-label="삭제">&times;</button>
+                </li>
+            </ul>
+
+            <p class="cart-empty" style="display:none;">장바구니에 담긴 상품이 없습니다.</p>
+
+            <div class="cart-foot">
+                <a href="best.html" class="cart-continue">&larr; 쇼핑 계속하기</a>
+            </div>
+        </div>
+
+        <!-- 우측: 주문 요약 + 혜택 -->
+        <aside class="cart-aside">
+            <div class="cart-summary">
+                <h2 class="cs-title">주문 요약</h2>
+                <div class="cs-row"><span>상품 금액 (<span id="csCount">3</span>)</span><span id="csGoods">₩277,000</span></div>
+                <div class="cs-row"><span>배송비</span><span id="csShip">₩0</span></div>
+                <div class="cs-total">
+                    <span class="cs-total-label">총 주문 금액</span>
+                    <span class="cs-total-value" id="csTotal">₩277,000</span>
+                </div>
+                <button class="btn btn-fill cs-order" type="button">주문하기</button>
+                <button class="btn btn-line cs-gift" type="button">선물하기</button>
+            </div>
+        </aside>
+    </section>
+
+    <!-- ===== 함께 구매하면 좋은 상품 ===== -->
+    <section class="inner cart-related">
+        <div class="pdp-related-head">
+            <h2>함께 구매하면 좋은 상품</h2>
+            <button class="more-arrow" type="button" aria-label="더보기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+        </div>
+        <ul class="related-grid goods-grid--fill">
+            <li class="goods">
+                <div class="goods-thumb">
+                    <button class="goods-like" aria-label="찜하기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.8 6.6a5 5 0 0 0-7.1 0L12 8.3l-1.7-1.7a5 5 0 1 0-7.1 7.1L12 22l8.8-8.3a5 5 0 0 0 0-7.1z"/></svg></button>
+                    <img src="image/main/best-thumb-ceramic-bowl.png" alt="도자기 높이 식기">
+                </div>
+                <p class="goods-name">도자기 높이 식기</p>
+                <div class="goods-price"><span class="now">₩15,900</span></div>
+            </li>
+            <li class="goods">
+                <div class="goods-thumb">
+                    <button class="goods-like" aria-label="찜하기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.8 6.6a5 5 0 0 0-7.1 0L12 8.3l-1.7-1.7a5 5 0 1 0-7.1 7.1L12 22l8.8-8.3a5 5 0 0 0 0-7.1z"/></svg></button>
+                    <img src="image/main/best-thumb-cactus-scratcher.png" alt="선인장 스크래쳐">
+                </div>
+                <p class="goods-name">선인장 스크래쳐</p>
+                <div class="goods-price"><span class="now">₩22,900</span></div>
+            </li>
+            <li class="goods">
+                <div class="goods-thumb">
+                    <button class="goods-like" aria-label="찜하기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.8 6.6a5 5 0 0 0-7.1 0L12 8.3l-1.7-1.7a5 5 0 1 0-7.1 7.1L12 22l8.8-8.3a5 5 0 0 0 0-7.1z"/></svg></button>
+                    <img src="image/main/best-thumb-feather-wand.png" alt="플라잉 깃털 낚싯대">
+                </div>
+                <p class="goods-name">플라잉 깃털 낚싯대</p>
+                <div class="goods-price"><span class="now">₩7,900</span></div>
+            </li>
+            <li class="goods detail-link" data-detail-url="product-chicken-treats.html">
+                <div class="goods-thumb">
+                    <button class="goods-like" aria-label="찜하기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.8 6.6a5 5 0 0 0-7.1 0L12 8.3l-1.7-1.7a5 5 0 1 0-7.1 7.1L12 22l8.8-8.3a5 5 0 0 0 0-7.1z"/></svg></button>
+                    <img src="image/main/best-thumb-chicken-treats.png" alt="동결건조 닭가슴살 트릿 70g">
+                </div>
+                <p class="goods-name">동결건조 닭가슴살 트릿 70g</p>
+                <div class="goods-price"><span class="now">₩12,500</span></div>
+            </li>
+            <li class="goods">
+                <div class="goods-thumb">
+                    <button class="goods-like" aria-label="찜하기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.8 6.6a5 5 0 0 0-7.1 0L12 8.3l-1.7-1.7a5 5 0 1 0-7.1 7.1L12 22l8.8-8.3a5 5 0 0 0 0-7.1z"/></svg></button>
+                    <img src="image/main/best-thumb-immune-supplement.png" alt="면역케어 영양제 60정">
+                </div>
+                <p class="goods-name">면역케어 영양제 60정</p>
+                <div class="goods-price"><span class="now">₩23,000</span></div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- ===== 회원가입 배너 ===== -->
+    <div class="inner cart-signup-wrap">
+        <div class="cart-signup">
+            <span class="cs-banner-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></span>
+            <p>지금 회원 가입하면 <span class="lh-br"><b>5,000원 할인 쿠폰</b>을 드려요!</span></p>
+            <a href="signup.html" class="btn btn-fill">회원 가입하기</a>
+        </div>
+    </div>
+
+    <!-- ===== 혜택 바 ===== -->
+    <section class="benefits">
+        <div class="inner benefits-inner">
+            <div class="benefit">
+                <span class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="13" height="10" rx="1"/><path d="M14 9h4l3 3v4h-7z"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
+                <div><h4>무료배송</h4><p>5만원 이상 구매 시</p></div>
+            </div>
+            <div class="benefit">
+                <span class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></span>
+                <div><h4>빠른 배송</h4><p>오늘 주문, 내일 도착</p></div>
+            </div>
+            <div class="benefit">
+                <span class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M3 8h18M12 8v13"/><path d="M12 8S10 3 7.5 4 9 8 12 8zM12 8s2-5 4.5-4S15 8 12 8z"/></svg></span>
+                <div><h4>안전한 포장</h4><p>꼼꼼하고 안전하게</p></div>
+            </div>
+            <div class="benefit">
+                <span class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="2.5" y="13" width="4" height="7" rx="1.5"/><rect x="17.5" y="13" width="4" height="7" rx="1.5"/><path d="M20 19v1a3 3 0 0 1-3 3h-3"/></svg></span>
+                <div><h4>친절한 상담</h4><p>365일 고객센터 운영</p></div>
+            </div>
+            <div class="benefit">
+                <span class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></span>
+                <div><h4>쉬운 반품</h4><p>7일 이내 반품 가능</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER (메인과 동일) ===== -->
+    <footer class="footer">
+        <div class="inner footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <p class="footer-logo">PurrCare</p>
+                    <p class="footer-slogan">FOR CATS, FOR LOVE</p>
+                </div>
+                <ul class="footer-nav">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="notice.html" class="nav-live">고객센터</a></li>
+                    <li><a href="#">입점문의</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <p>(주)PurrCare <span class="div">|</span> 대표이사: 김집사 <span class="div">|</span> 사업자등록번호: 123-45-67890 <span class="div">|</span> 통신판매업신고: 2024-서울강남-1234</p>
+                <p>서울시 강남구 낭낭로 123 푸어케어 빌딩 1층 <span class="div">|</span> 고객센터: 02-1234-5678 <span class="div">|</span> 이메일: purrcare@naver.com</p>
+                <p class="copy">&copy; 2024 PurrCare. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/jquery-4.0.0.min.js"></script>
+    <script src="script/main.js?v=34"></script>
+    <script>
+        $(function () {
+            // 로그인 회원에겐 회원가입 배너 숨김
+            try { if (localStorage.getItem('purrcare_user')) { $('.cart-signup-wrap').hide(); } } catch (e) {}
+            function won(n) { return '₩' + n.toLocaleString('ko-KR'); }
+
+            // 저장소(purrcare_cart) 기준으로 목록 렌더 — 상세페이지에서 담은 상품 반영
+            function itemHtml(it) {
+                var qty = it.qty || 1;
+                return '<li class="cart-item" data-price="' + it.price + '">' +
+                    '<label class="ci-check"><input type="checkbox" class="ci-check-box"></label>' +
+                    '<div class="ci-thumb"><img src="' + it.image + '" alt="' + it.name + '"></div>' +
+                    '<div class="ci-info"><p class="ci-name">' + it.name + '</p><p class="ci-opt">' + (it.opt || '단품') + '</p><p class="ci-unit">' + won(it.price) + '</p></div>' +
+                    '<div class="ci-qty"><div class="qty-stepper"><button class="qty-minus" type="button" aria-label="수량 감소">&minus;</button><span class="qty-num">' + qty + '</span><button class="qty-plus" type="button" aria-label="수량 증가">+</button></div></div>' +
+                    '<div class="ci-total">' + won(it.price * qty) + '</div>' +
+                    '</li>';
+            }
+            $('.cart-list').html(pcCartGet().map(itemHtml).join(''));
+
+            function persist() {
+                var arr = [];
+                $('.cart-item').each(function () {
+                    var $it = $(this);
+                    arr.push({
+                        name: $it.find('.ci-name').text(),
+                        opt: $it.find('.ci-opt').text(),
+                        price: parseInt($it.attr('data-price'), 10) || 0,
+                        image: $it.find('.ci-thumb img').attr('src'),
+                        qty: parseInt($it.find('.qty-num').text(), 10) || 1
+                    });
+                });
+                pcCartSave(arr);
+            }
+
+            function recalc() {
+                var total = $('.cart-item').length;
+                var checked = 0, goods = 0;
+                $('.cart-item').each(function () {
+                    var $it = $(this);
+                    var price = parseInt($it.attr('data-price'), 10) || 0;
+                    var qty = parseInt($it.find('.qty-num').text(), 10) || 1;
+                    var sub = price * qty;
+                    $it.find('.ci-total').text(won(sub));
+                    if ($it.find('.ci-check-box').is(':checked')) { checked++; goods += sub; }
+                });
+                var ship = (goods === 0 || goods >= 50000) ? 0 : 3000;
+                $('#csGoods').text(won(goods));
+                $('#csShip').text(won(ship));
+                $('#csTotal').text(won(goods + ship));
+                $('#csCount').text(checked);
+                $('#cartAllCount').text(checked + '/' + total);
+                $('#cartAll').prop('checked', total > 0 && checked === total);
+                if (total === 0) {
+                    $('.cart-list, .cart-foot').hide();
+                    $('.cart-empty').show();
+                    $('.cart-aside').css('opacity', .55);
+                }
+            }
+            // 수량 증감 (저장소에 즉시 반영)
+            $('.cart-list').on('click', '.qty-minus', function () {
+                var $n = $(this).siblings('.qty-num');
+                $n.text(Math.max(1, (parseInt($n.text(), 10) || 1) - 1));
+                recalc(); persist();
+            });
+            $('.cart-list').on('click', '.qty-plus', function () {
+                var $n = $(this).siblings('.qty-num');
+                $n.text((parseInt($n.text(), 10) || 1) + 1);
+                recalc(); persist();
+            });
+            $('#cartAll').on('change', function () { $('.ci-check-box').prop('checked', this.checked); recalc(); });
+            $('.cart-list').on('change', '.ci-check-box', recalc);
+            $('.cart-list').on('click', '.ci-remove', function () { $(this).closest('.cart-item').remove(); recalc(); persist(); });
+            $('.cart-del-sel').on('click', function () { $('.ci-check-box:checked').closest('.cart-item').remove(); recalc(); persist(); });
+            $('.cs-order, .cs-gift').on('click', function () { pcToast('주문 기능은 준비 중입니다 🐾'); });
+
+            // '함께 구매' 등 다른 영역에서 담으면 새로고침 없이 목록에 즉시 반영
+            window.addEventListener('pc-cart-changed', function () {
+                var have = {};
+                $('.cart-item').each(function () { have[$(this).find('.ci-name').text()] = true; });
+                var added = false;
+                pcCartGet().forEach(function (it) {
+                    if (!have[it.name]) { $('.cart-list').append(itemHtml(it)); added = true; }
+                });
+                if (added) {
+                    $('.cart-list, .cart-foot').show();
+                    $('.cart-empty').hide();
+                    $('.cart-aside').css('opacity', '');
+                    recalc();
+                }
+            });
+
+            recalc();
+            persist();
+        });
+    </script>
+</body>
+</html>
